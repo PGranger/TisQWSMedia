@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">4</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-209872428"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-209872428" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TisQWSMedias.html">TisQWSMedias</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/default.html">\</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\</small>TisQWSMedias</h1>
+                    <p><em>Fichier comprenant uniquement la classe TisQWSMedias</em></p>
+                    <p>Et qui ne nécessite du coup pas grand commentaire</p>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/TisQWSMedias.html#method___construct" class="">__construct()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_envoyerFichier" class="">envoyerFichier()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_associerFichiersOffres" class="">associerFichiersOffres()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_getDossier" class="">getDossier()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_viderDossier" class="">viderDossier()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_getFichiers" class="">getFichiers()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_error" class="">error()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_debug" class="">debug()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <a href="../classes/TisQWSMedias.html#method_supprimerDocuments" class="">supprimerDocuments()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_isGuid" class="">isGuid()</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#method_check_mail" class="">check_mail()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/TisQWSMedias.html#property_questionnaireId" class="">$questionnaireId</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_client" class="">$client</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_structureId" class="">$structureId</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_utilisateurId" class="">$utilisateurId</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_packet_size" class="">$packet_size</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_debug" class="">$debug</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_mail_administrateur" class="">$mail_administrateur</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_mail_expediteur" class="">$mail_expediteur</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_url_wcf_qweb" class="">$url_wcf_qweb</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_url_wcf_media" class="">$url_wcf_media</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_soap" class="">$soap</a><br />
+                                                                    <a href="../classes/TisQWSMedias.html#property_soap_media" class="">$soap_media</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/TisQWSMedias.class.html"><div class="path-wrapper">TisQWSMedias.class.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\TisQWSMedias</div>
+                            </dd>
+
+                        
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_questionnaireId" name="property_questionnaireId" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$questionnaireId</h3>
+                <pre class="signature">$questionnaireId : \guid</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                \guid
+                &mdash; GUID du questionnaire. Vous le trouverez dans Tourinsoft dans : Gen. Web &gt; Questionnaire Web &gt; Gestion de la publication &gt; *Votre questionnaire* &gt; Tout en bas                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_client" name="property_client" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$client</h3>
+                <pre class="signature">$client : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; Nom de votre structure sur Tourinsoft. Le plus souvent, [xxx].tourinsoft.com (ex: cdt03.tourinsoft.com)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_structureId" name="property_structureId" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$structureId</h3>
+                <pre class="signature">$structureId : \guid</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                \guid
+                &mdash; GUID de votre structure. Comme pour questionnaireId, en bas de la modification de la publication du questionnaire web : choisissez votre structure dans le menu déroulant puis le GUID correspondant s&#039;affichera en dessous (Structure Id : XXX...)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_utilisateurId" name="property_utilisateurId" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$utilisateurId</h3>
+                <pre class="signature">$utilisateurId : \guid</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                \guid
+                &mdash; GUID de l&#039;utilisateur (pour savoir quels dossiers et fichiers de la médiathèque vous avez le droit de voir ou non). Un peu plus dur à trouver : dans Admin &gt; Utilisateur, trouvez votre utilisateur dans la liste, puis placez le curseur de souris sur le bouton &quot;modifier&quot;, puis clic droit, copier l&#039;adresse du lien : ça doit ressembler à ça :  http://cdt03.tourinsoft.com/t.../general.aspx?id=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX. Il faut récupérer le GUID tout à la fin (id=...)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_packet_size" name="property_packet_size" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$packet_size</h3>
+                <pre class="signature">$packet_size : integer</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                &mdash; les services uploadFile et uploadFileNext recoivent les fichiers par &quot;paquet&quot; et non en une seule fois. On définit la taille de ce paquet ici (en byte)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_debug" name="property_debug" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$debug</h3>
+                <pre class="signature">$debug : boolean</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                boolean
+                &mdash; Affichera le déroulement du script dans la console (SSH) ou à l&#039;écran (http)                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_mail_administrateur" name="property_mail_administrateur" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$mail_administrateur</h3>
+                <pre class="signature">$mail_administrateur : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; Adresse mail à qui seront envoyées les erreurs si debug OFF                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_mail_expediteur" name="property_mail_expediteur" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$mail_expediteur</h3>
+                <pre class="signature">$mail_expediteur : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; Adresse mail de l&#039;expéditeur des erreurs si debug OFF                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_url_wcf_qweb" name="property_url_wcf_qweb" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$url_wcf_qweb</h3>
+                <pre class="signature">$url_wcf_qweb : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; URL du webservice questionnaire web                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_url_wcf_media" name="property_url_wcf_media" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$url_wcf_media</h3>
+                <pre class="signature">$url_wcf_media : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; URL du webservice mediathèque                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_soap" name="property_soap" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$soap</h3>
+                <pre class="signature">$soap : object</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                object
+                &mdash; Implémentation (soap) du webservice $url_wcf_qweb                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_soap_media" name="property_soap_media" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$soap_media</h3>
+                <pre class="signature">$soap_media : object</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                object
+                &mdash; Implémentation (soap) du webservice $url_wcf_media                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___construct" name="method___construct" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__construct()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__construct(array  <span class="argument">$params</span>) </pre>
+                <p><em>Constructeur</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>array</td>
+                                <td>$params </td>
+                                <td><p>Liste des paramètres du constructeur. Voir les variables privées de la classe pour la description détaillée</p>
+<pre><code>            $params['questionnaireId']    guid    (obligatoire)
+            $params['client']    string    (obligatoire)
+            $params['structureId']    guid    (obligatoire)
+            $params['utilisateurId']    guid    (obligatoire)
+            $params['utilisateurId']    guid    (obligatoire)</code></pre></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_envoyerFichier" name="method_envoyerFichier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">envoyerFichier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">envoyerFichier(string  <span class="argument">$path</span>, \guid  <span class="argument">$dossierId</span>, array  <span class="argument">$langues</span>) : \guid|false</pre>
+                <p><em>Envoyer le fichier $path (local ou distant) dans le dossier $dossierId avec les textes contenus dans $langues</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$path </td>
+                                <td><p>Chemin du fichier à envoyer. Peut être une url (http://...) ou un fichier local (/home/...)</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>\guid</td>
+                                <td>$dossierId </td>
+                                <td><p>Identifiant du dossier sur la médiathèque de Tourinsoft</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$langues </td>
+                                <td><p>Tableau des descriptions texte de l'image (titre, description...)</p>
+<pre><code>Ex : Array(
+        Array('titre'=&gt;'Titre en Français','credit'=&gt;'Crédit en Français','langueID'=&gt;'fr-FR'),
+        Array('titre'=&gt;'Titre en Anglais','credit'=&gt;'Crédit en Anglais','langueID'=&gt;'en-EN')
+    )</code></pre></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \guid|false
+                                            &mdash; <p>Renvoie l'identifiant (guid) de l'image ajoutée à la médiathèque, ou false si une erreur s'est produite</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_associerFichiersOffres" name="method_associerFichiersOffres" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">associerFichiersOffres()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">associerFichiersOffres(\tif  <span class="argument">$id_tis</span>, array  <span class="argument">$guids</span>) : true|false</pre>
+                <p><em>associer toutes les images dont les identifiants (guid) sont contenus dans $guids ) l&#039;offre $id_tis. Les guids sont récupérés de la médiathèque, par exemple après avoir été envoyés avec envoyerFichier.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\tif</td>
+                                <td>$id_tis </td>
+                                <td><p>Identifiant TIF Tourinsoft de la fiche à associer</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$guids </td>
+                                <td><p>Tableau des guids des images ajoutées à la médiathèque (le plus souvent qui viennent d'être ajoutées avec envoyerFichier)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    true|false
+                                            &mdash; <p>L'enregistrement a fonctionné... ou pas</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getDossier" name="method_getDossier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getDossier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getDossier(Array  <span class="argument">$params</span>) : \guid|false</pre>
+                <p><em>Renvoie le GUID du dossier dont le nom est $params[&#039;dossierNom&#039;], qui sera recherché dans le dossier dont le GUID est $params[&#039;dossierParent&#039;]</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>Array</td>
+                                <td>$params </td>
+                                <td><p>Contient tous les paramètres</p>
+<pre><code>                    $params['dossierParentId']    (obligatoire)    GUID du dossier racine où rechercher le dossier
+                    $params['dossierNom']    (obligatoire)    Nom du dossier que l'ont recherche (ou que l'on crée)</code></pre></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    \guid|false
+                                            &mdash; <p>Retourne l'identifiant du dossier trouvée ou créé</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_viderDossier" name="method_viderDossier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">viderDossier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">viderDossier(\guid  <span class="argument">$dossierId</span>, array  <span class="argument">$params = null</span>) </pre>
+                <p><em>Vide le dossier $dossierId des images qu&#039;il contient</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\guid</td>
+                                <td>$dossierId </td>
+                                <td><p>N.C.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$params </td>
+                                <td><p>Paramètres supplémentaires</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                                                            <p>interpréter $params['supprimerRacine']</p>
+                                                                                            <p>interpréter $params['supprimerSousDossiers']</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getFichiers" name="method_getFichiers" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getFichiers()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getFichiers(\guid  <span class="argument">$dossierId</span>) : array|false</pre>
+                <p><em>Renvoie les fichiers contenus dans $dossierId. Attention : les fichiers sont renvoyés dans un tableau. Chaque fichier est un objet composé sur le modèle suivant :
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementCredit&quot; nillable=&quot;true&quot; type=&quot;xs:string&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementDateCrea&quot; type=&quot;xs:dateTime&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementDateMaj&quot; type=&quot;xs:dateTime&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementHeight&quot; nillable=&quot;true&quot; type=&quot;xs:int&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementId&quot; type=&quot;ser:guid&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementNom&quot; nillable=&quot;true&quot; type=&quot;xs:string&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementSize&quot; type=&quot;xs:int&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementUrl&quot; nillable=&quot;true&quot; type=&quot;xs:string&quot;/&gt;
+	&lt;xs:element minOccurs=&quot;0&quot; name=&quot;elementWidth&quot; nillable=&quot;true&quot; type=&quot;xs:int&quot;/&gt;
+	Voir http://wcf.tourinsoft.com/Mediatheque/ImportMediaService.svc?xsd=xsd2 pour le détail</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\guid</td>
+                                <td>$dossierId </td>
+                                <td><p>N.C.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    array|false
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_error" name="method_error" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">error()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">error(string|array  <span class="argument">$fault</span>) : boolean</pre>
+                <p><em>Affiche une erreur et arrête le script si debug ON</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string|array</td>
+                                <td>$fault </td>
+                                <td><p>Message à afficher ou exception renvoyée</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>N.C.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_debug" name="method_debug" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">debug()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">debug(string|array  <span class="argument">$msg</span>, boolean  <span class="argument">$rl = true</span>) </pre>
+                <p><em>Affiche un message si debug true</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string|array</td>
+                                <td>$msg </td>
+                                <td><p>Message à afficher</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>boolean</td>
+                                <td>$rl </td>
+                                <td><p>Afficher la date et un retour ligne</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                                                            <p>Si on est en debug off, prévoir un envoi de tous les messages logués par mail (ou dans un fichier log ?)</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_supprimerDocuments" name="method_supprimerDocuments" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">supprimerDocuments()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">supprimerDocuments(\guid|array  <span class="argument">$guids</span>, array  <span class="argument">$params = null</span>) : boolean</pre>
+                <p><em>Supprime tous les documents dont le guid est contenu dans $guids, peu importe son emplacement dans les dossiers de la médiathèque.</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\guid|array</td>
+                                <td>$guids </td>
+                                <td><p>GUID du fichier, ou tableau des GUIDs des fichiers à supprimer</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>array</td>
+                                <td>$params </td>
+                                <td><p>Paramètres supplémentaires</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isGuid" name="method_isGuid" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">isGuid()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isGuid(\guid  <span class="argument">$guid</span>) : boolean</pre>
+                <p><em>Vérifie que $guid est bien un GUID valide</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>\guid</td>
+                                <td>$guid </td>
+                                <td><p>N.C.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>N.C.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_check_mail" name="method_check_mail" class="anchor"></a>
+            <article class="method">
+                <h3 class="private ">check_mail()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">check_mail(string  <span class="argument">$mail</span>) : boolean</pre>
+                <p><em>Vérifie que $mail est un mail valide</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$mail </td>
+                                <td><p>N.C.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                            &mdash; <p>N.C.</p>
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">TisQWSMedias.class.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/TisQWSMedias.class.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on September 19th, 2014 at 11:57.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
