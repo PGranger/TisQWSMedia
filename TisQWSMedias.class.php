@@ -1,29 +1,25 @@
 <?php
-	
+
 	/**
-	*	Fichier comprenant uniquement la classe TisQWSMedias
+	*	Classe d'utilisation du webservice ImportMediaService de Tourinsoft V5
 	*
-	*	Et qui ne nécessite du coup pas grand commentaire
+	*	Classe créée pour simplifier la création/suppression de dossiers et d'images (association aux offres comprise) dans la médiathèque de Tourinsoft à l'aide du webservice ImportMediaService.
+	*		Documentation complète : https://github.com/PGranger/TisQWSMedia
+	*		Voir la documentation en ligne du webservice pour plus de détails : http://api-doc.tourinsoft.com/#/questionnaire-web#api-services-medias
+	*		Cette classe est fournie en l'état, sans garantie de fonctionnement, sous licence MIT : vous pouvez la réutiliser et la modifier à votre guise, sans nécessairement fournir votre propre code source (même si toute participation est la bienvenue).
+	*
+	*	@author	Pierre Granger <p.granger@allier-tourisme.net>
+	*	@licence	MIT Licence
+	*	@link	Github	https://github.com/PGranger/TisQWSMedia
+	*	@link	Page professionnelle	http://www.allier-auvergne-tourisme.com
+	*	@link	Page personnelle	http://www.pierre-granger.fr
+	*	@link	Documentation du webservice de Tourinsoft	http://api-doc.tourinsoft.com/#/questionnaire-web#api-services-medias
+	*	@version	v1.0
+	*	@date	2014-09-18
 	*/
-		
+
 	class TisQWSMedias {
 		
-		/**
-		*	Classe d'utilisation du webservice ImportMediaService de Tourinsoft V5
-		*
-		*	Classe créée pour simplifier la création/suppression de dossiers et d'images (association aux offres comprise) dans la médiathèque de Tourinsoft à l'aide du webservice ImportMediaService.
-		*	Voir la documentation en ligne du webservice pour plus de détails : http://api-doc.tourinsoft.com/#/questionnaire-web#api-services-medias
-		*	Cette classe est fournie en l'état, sans garantie de fonctionnement, sous licence MIT : vous pouvez la réutiliser et la modifier à votre guise, sans nécessairement fournir votre propre code source (même si toute participation est la bienvenue).
-		*
-		*	@author	Pierre Granger <p.granger@allier-tourisme.net>
-		*	@licence	MIT Licence
-		*	@link	http://www.allier-auvergne-tourisme.com
-		*	@link	http://www.pierre-granger.fr
-		*	@link	http://api-doc.tourinsoft.com/#/questionnaire-web#api-services-medias
-		*	@version	v1.0
-		*	@date	2014-09-18
-		*/
-
 		/**
 		*	@var	guid	GUID du questionnaire. Vous le trouverez dans Tourinsoft dans : Gen. Web > Questionnaire Web > Gestion de la publication > *Votre questionnaire* > Tout en bas
 		*/
