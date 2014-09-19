@@ -20,6 +20,11 @@
 	*				)
 	*			)
 	*		) ;
+	*	Pour pouvoir utiliser cet exemple et la classe TisQWSMedias, vous devrez impérativement au préalable créer un questionnaire web sur Tourinsoft, sur le bordereau souhaité, qui contiendra simplement les champs [Photo1], [Photo2]... avec le nombre d'occurrence de votre choix.
+	*	Le questionnaire devra être publié en tant que questionnaire Webservice (et non questionnaire HTML) : voir http://documentation.tourinsoft.com/index.php/Questionnaire_web pour plus d'informations.
+	*		Ex :
+	*		[Photo1] [Photo2] [Photo3]... [Photo20]
+	*	C'est dans la publication de ce questionnaire (Gen. Web > Questionnaire Web > Gestion de la publication) que vous trouverez la plupart des identifiants requis ci-dessous (questionnaireId, structureId, client...).
 	*/
 	error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE) ;
 	ini_set("display_errors", 1) ;
@@ -37,7 +42,8 @@
 	/**
 	*	config.inc.php contient simplement les variables $cfg_XXX avec les identifiants (structure, questionnaire, client, utilisateur...).
 	*	Bien entendu vous pouvez les saisir directement ci-dessous ($questionnaireId = 'XXXX-....'). Je les ai séparés simplement pour les sortir du depôt Git.
-	*	Consulter la documentation de TisQWSMedias.class.php pour savoir où récupérer les différents identifiant sur Tourinsoft.
+	*	Consulter la documentation de TisQWSMedias.class.php pour savoir où récupérer les différents identifiant sur Tourinsoft :
+	*	http://cdt.allier-auvergne-tourisme.com/TisQWSMedia/docs/classes/TisQWSMedias.html#properties
 	*/
 	require_once(realpath(dirname(__FILE__).'/../').'/config.inc.php') ;
 	$questionnaireId = $cfg_questionnaireId ; // 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'

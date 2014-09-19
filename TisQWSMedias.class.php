@@ -263,7 +263,7 @@
 		*	@todo	interpréter $params['supprimerRacine']
 		*	@todo	interpréter $params['supprimerSousDossiers']
 		*/
-		public function viderDossier($dossierId,$params=null)
+		private function viderDossier($dossierId,$params=null)
 		{
 			// Refuser de supprimer si on a pas un vrai Guid
 			// Ca ne protège pas de tout mais ça évitera au moins une suppression de la racine (pas testé si c'était faisable...)
@@ -436,7 +436,7 @@
 		*	@param	string|array	$fault	Message à afficher ou exception renvoyée
 		*	@return	bool	N.C.
 		*/
-		public function error($fault)
+		private function error($fault)
 		{
 			$entete = Array() ;
 			$additional_parameters = null ;
