@@ -4,16 +4,14 @@
 	*	Classe d'utilisation du webservice ImportMediaService de Tourinsoft V5
 	*
 	*	Classe créée pour simplifier la création/suppression de dossiers et d'images (association aux offres comprise) dans la médiathèque de Tourinsoft à l'aide du webservice ImportMediaService.
-	*		Documentation complète : https://github.com/PGranger/TisQWSMedia
-	*		Voir la documentation en ligne du webservice pour plus de détails : http://api-doc.tourinsoft.com/#/questionnaire-web#api-services-medias
-	*		Cette classe est fournie en l'état, sans garantie de fonctionnement, sous licence MIT : vous pouvez la réutiliser et la modifier à votre guise, sans nécessairement fournir votre propre code source (même si toute participation est la bienvenue).
+	*	Cette classe est fournie en l'état, sans garantie de fonctionnement, sous licence MIT : vous pouvez la réutiliser et la modifier à votre guise, sans nécessairement fournir votre propre code source (même si toute participation est la bienvenue).
 	*
 	*	@author	Pierre Granger <p.granger@allier-tourisme.net>
 	*	@licence	MIT Licence
-	*	@link	Github	https://github.com/PGranger/TisQWSMedia
-	*	@link	Page professionnelle	http://www.allier-auvergne-tourisme.com
-	*	@link	Page personnelle	http://www.pierre-granger.fr
-	*	@link	Documentation du webservice de Tourinsoft	http://api-doc.tourinsoft.com/#/questionnaire-web#api-services-medias
+	*	@link	http://api-doc.tourinsoft.com/#/questionnaire-web#api-services-medias
+	*	@link	https://github.com/PGranger/TisQWSMedia
+	*	@link	http://www.allier-auvergne-tourisme.com
+	*	@link	http://www.pierre-granger.fr
 	*	@version	v1.0
 	*	@date	2014-09-18
 	*/
@@ -36,7 +34,6 @@
 		*	@var	guid	GUID de l'utilisateur (pour savoir quels dossiers et fichiers de la médiathèque vous avez le droit de voir ou non). Un peu plus dur à trouver : dans Admin > Utilisateur, trouvez votre utilisateur dans la liste, puis placez le curseur de souris sur le bouton "modifier", puis clic droit, copier l'adresse du lien : ça doit ressembler à ça :  http://cdt03.tourinsoft.com/t.../general.aspx?id=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX. Il faut récupérer le GUID tout à la fin (id=...)
 		*/
 		private $utilisateurId ;
-		
 		/**
 		*	@var	int	les services uploadFile et uploadFileNext recoivent les fichiers par "paquet" et non en une seule fois. On définit la taille de ce paquet ici (en byte)
 		*/
